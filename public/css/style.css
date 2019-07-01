@@ -13,6 +13,14 @@ body {
   background: #000;
   color: #fff; }
 
+.sale-price-block {
+  background-color: white;
+  font-weight: 900;
+  padding: 8px 0;
+  width: 250px;
+  text-align: center;
+}
+
 a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
@@ -1682,6 +1690,11 @@ h1, h2, h3, h4, h5,
     .experience {
       bottom: 0px;
       right: 0px; } }
+@media (max-width: 991.98px) {
+  .experience {
+    position: relative;
+  }
+}
   .experience span {
     display: block; }
   .experience .year {
