@@ -1779,6 +1779,52 @@ h1, h2, h3, h4, h5,
 .wishlist.active span, .wishlist:hover span {
   color: #f23a2e; }
 
+@media (min-width: 768px) {
+  .stats-mobile {
+    display: none !important;
+  }
+  .preview-images > div {
+    padding: 20px 40px;
+  }
+  .preview-images img {
+    display: inline-block;
+    width: 180px;
+    height: 120px;
+    min-width: auto;
+    min-height: auto;
+    cursor: pointer;
+    float: left;
+    margin-right: 20px;
+  }
+  .preview-images img.active-preview-image {
+    border: 2px solid #f16821;
+  }
+}
+@media (max-width: 767.98px) {
+  .stats-laptop {
+    display: none !important;
+  }
+  .stats-mobile .text-md-left p {
+    font-weight: 900;
+  }
+  .preview-image-main {
+    display: none;
+  }
+  .preview-images > div {
+    padding: 20px 40px;
+  }
+  .preview-images img {
+    width: 100%;
+    height: inherit;
+    min-width: auto;
+    min-height: auto;
+    cursor: pointer;
+    float: left;
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+}
+
 .get-notification {
   text-align: center; }
   .get-notification h2 {

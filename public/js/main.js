@@ -8,7 +8,20 @@ jQuery(document).ready(function($) {
 
 	"use strict";
 
-	
+	var $previewImages = $('.preview-images');
+
+	$previewImages.find('img').click(function () {
+		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+			var $this = this;
+			$('.active-preview-image').toggleClass();
+			$($this).addClass('active-preview-image');
+			$(".preview-image-main")
+				.fadeOut(400, function() {
+					$(".preview-image-main").attr('src',$this.src);
+				})
+				.fadeIn(400);
+		}
+	});
 
 	var siteMenuClone = function() {
 
@@ -187,8 +200,8 @@ jQuery(document).ready(function($) {
 
 		$('#date-countdown').countdown('2020/10/10', function(event) {
 		  var $this = $(this).html(event.strftime(''
-		    + '<span class="countdown-block"><span class="label">%w</span> нед </span>'
-		    + '<span class="countdown-block"><span class="label">%d</span> дн </span>'
+		    + '<span class="countdown-block"><span class="label">00</span> нед </span>'
+		    + '<span class="countdown-block"><span class="label">03</span> дн </span>'
 		    + '<span class="countdown-block"><span class="label">%H</span> час </span>'
 		    + '<span class="countdown-block"><span class="label">%M</span> мин </span>'
 		    + '<span class="countdown-block"><span class="label">%S</span> сек</span>'));
