@@ -11,7 +11,7 @@ jQuery(document).ready(function($) {
 	var $previewImages = $('.preview-images');
 
 	$previewImages.find('img').click(function () {
-		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		if( !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 			var $this = this;
 			$('.active-preview-image').toggleClass();
 			$($this).addClass('active-preview-image');
